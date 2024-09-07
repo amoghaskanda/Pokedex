@@ -60,7 +60,6 @@ namespace Pokedex.Tests
         {
             object responseFromApi = new { contents = new { translated = expected } };
 
-
             var response = new HttpResponseMessage()
             {
                 StatusCode = HttpStatusCode.OK,
@@ -84,7 +83,6 @@ namespace Pokedex.Tests
         {
             object responseFromApi = new { contents = new { translated = expected } };
 
-
             var response = new HttpResponseMessage()
             {
                 StatusCode = HttpStatusCode.OK,
@@ -103,11 +101,10 @@ namespace Pokedex.Tests
         [Theory]
         [InlineData(Catalog.someString, Catalog.someStringShakespeareTranslated)]
         [InlineData(Catalog.anotherString, Catalog.anotherStringShakespeareTranslated)]
-        [InlineData(" ", "")]
+        [InlineData(Catalog.whiteSpace, Catalog.blank)]
         public async Task ShakespeareTranslation_Valid(string description, string expected)
         {
             object responseFromApi = new { contents = new { translated = expected } };
-
 
             var response = new HttpResponseMessage()
             {
@@ -131,7 +128,6 @@ namespace Pokedex.Tests
         public async Task ShakespeareTranslation_Invalid(string description, string expected)
         {
             object responseFromApi = new { contents = new { translated = expected } };
-
 
             var response = new HttpResponseMessage()
             {
@@ -243,6 +239,8 @@ namespace Pokedex.Tests
         public const string anotherString = "Fly me to the moon. Let me play among the stars.";
         public const string anotherStringYodaTranslated = "Fly me to the moon.Me play among the stars,  let";
         public const string anotherStringShakespeareTranslated = "Fly me to the moon. Did let me playeth 'mongst the stars.";
+        public const string whiteSpace = " ";
+        public const string blank = "";
 
 
     }

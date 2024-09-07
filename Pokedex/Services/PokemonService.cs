@@ -25,7 +25,6 @@ namespace Pokedex.Services
                 Habitat = species?.Habitat!.HabitatName,
             };
 
-
             if (shouldTranslateDescription)
             {
                 try

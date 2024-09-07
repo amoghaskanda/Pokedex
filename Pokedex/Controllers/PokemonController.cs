@@ -8,12 +8,10 @@ namespace Pokedex.Controllers
     public class PokemonController : ControllerBase
     {
         private readonly IPokemonService _pokemonService;
-
         public PokemonController(IPokemonService pokemonService)
         {
             _pokemonService = pokemonService;
         }
-
 
         [HttpGet("{name}")]
         public async Task<IActionResult> Get([FromRoute] string name)
