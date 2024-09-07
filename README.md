@@ -3,7 +3,7 @@
 This project is a .NET Core application written in C#. It presents endpoint to get a simplified Pokedex with options to translate description.
 ## Prerequisites
 
-This sample is written in C# and targets .NET Core 8.0. It requires the [.NET Core 8.0 SDK](https://dotnet.microsoft.com/en-us/download).
+The project is written in C# and targets .NET Core 8.0. It requires the [.NET Core 8.0 SDK](https://dotnet.microsoft.com/en-us/download). Additionally, [Visual Studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false) is recommended for a smoother experience.
 ## Project structure
 ```console
 .
