@@ -24,10 +24,23 @@ namespace Pokedex.Services
                 Description = species?.Description,
                 Habitat = species?.Habitat!.HabitatName,
             };
-            if (shouldTranslateDescription)
-                return await TranslatedPokemonInfo(pokemon);
-            return pokemon;
 
+
+            if (shouldTranslateDescription)
+            {
+                try
+                {
+                    return await TranslatedPokemonInfo(pokemon);
+                }
+
+                // Returns standard description for failed translations
+                catch (Exception ex)
+                {
+                    return pokemon;
+                }
+            }
+
+            return pokemon;
         }
 
         public async Task<Pokemon> TranslatedPokemonInfo(Pokemon pokemon)

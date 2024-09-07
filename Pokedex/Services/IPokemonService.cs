@@ -11,5 +11,4 @@ namespace Pokedex.Services
         Task<string?> Translate(string? descriptionCleaned, string Url);
         Task<Species?> GetPokemonSpecies(string name);
     }
-
 }
