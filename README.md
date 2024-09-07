@@ -41,6 +41,6 @@ dotnet run
 - Visual Studio
     - Open ```Pokedex.sln``` in Visual Studio
     - Testing: Test > Rull All Tests
-    - Run: Open Debug > Start Debugging  
+    - Run: Debug > Start Debugging
 ## Run
-To interact with the API, use [Swagger](http://localhost:5000/swagger)
+To interact with the API, use [Swagger](http://localhost:5000/swagger/index.html)
