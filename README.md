@@ -25,22 +25,31 @@ The project is written in C# and targets .NET Core 8.0. It requires the [.NET Co
 │   └── ...
 └── ...
 ```
-## Run Tests
-```console
-cd ./Pokedex/
-dotnet test
-```
+## Installation and Usage
 
-## Build and Run Solution
-
-- Terminal:
 ```console
+# Clone the repository
+git clone https://github.com/amoghaskanda/Pokedex.git
+
+# Enter Project Directory
+cd Pokedex/Pokedex
+
+# Build Solution
 dotnet build
+
+# Run Unit Tests
+dotnet test
+
+# Run Solution
 dotnet run
 ```
-- Visual Studio
-    - Open ```Pokedex.sln``` in Visual Studio
-    - Testing: Test > Rull All Tests
-    - Run: Debug > Start Debugging
+Alternatively, open ```Pokedex.sln``` using Visual Studio and run Debug > Start to launch the swagger interface.
+The Unit Tests can be run from Test > Run All Tests
 ## Run
 To interact with the API, use [Swagger](http://localhost:5000/swagger/index.html)
+#### Available Endpoints
+```console
+[1]: /pokemon/{name}
+[2]: /pokemon/translated/{name}
+```
+
